@@ -9,12 +9,12 @@ public class Main {
 		AnnotationConfigApplicationContext context = 
 				new AnnotationConfigApplicationContext(IocConfig.class); 
 		
-		    ICustomerDal iCustomerDal = context.getBean("database", ICustomerDal.class);
+		    ICustomerService iCustomerService = context.getBean("service", ICustomerService.class);
 		
 		
 		//CustomerManager customerManager=new CustomerManager(context.getBean("database", ICustomerDal.class));
 		
-		iCustomerDal.add();
+		iCustomerService.add();
 		
 			//CustomerManager customerManager=new CustomerManager(new CustomerDal()); //oracle a eklendi
 			//CustomerManager customerManager=new CustomerManager(new MysqlCustomerDal()); //mysql e eklendi

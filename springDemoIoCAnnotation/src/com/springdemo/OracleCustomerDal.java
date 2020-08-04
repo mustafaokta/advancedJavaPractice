@@ -1,15 +1,13 @@
 package com.springdemo;
 
 import org.springframework.stereotype.Component;
-@Component("database")
+//@Component("database") bunun yerine method tanýmlayýp new ledik
 public class OracleCustomerDal implements ICustomerDal{
-	String connectionString;
-	
+	String connectionString;	
 
 public String getConnectionString() {
 		return connectionString;
 	}
-
 
 	public void setConnectionString(String connectionString) {
 		this.connectionString = connectionString;
@@ -23,8 +21,5 @@ public void add() {
 	System.out.println("connectionString verisi : "+ this.connectionString);
 	
 }
-
-
-
 
 }

@@ -1,7 +1,9 @@
 package com.springdemo;
 
-public class MssqlCustomerDal implements ICustomerDal {
+import org.springframework.beans.factory.annotation.Value;
 
+public class MssqlCustomerDal implements ICustomerDal {
+	@Value("${database.connectionString}")
 	String connectionString;
 	
 	
