@@ -28,10 +28,21 @@ public class Main {
 			//ASC-Ascending
 			//DESC-Descending
 			
-			 List<String> countryCodes =
+		/*	 List<String> countryCodes =
              session.createQuery("select c.countryCode from City c GROUP BY c.countryCode"
 			 ).getResultList();
-			 for(String countryCode:countryCodes) { System.out.println(countryCode); }
+			 for(String countryCode:countryCodes) { System.out.println(countryCode); } */
+			
+			List<City> cities = session.createQuery("from City").getResultList();
+			
+			try {
+				for (City city:cities) {
+					System.out.println(city.getName());
+				}
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
 			 
 			
 			//INSERT
